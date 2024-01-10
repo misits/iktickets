@@ -1,0 +1,21 @@
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.iktickets-btn {
+  width: fit-content;
+  padding: 0.5em 1em;
+  color: var(--iktickets-color-white);
+  background-color: var(--iktickets-color-black);
+  border: 2px solid var(--iktickets-color-black);
+  cursor: pointer;
+  transition: all 0.3s var(--iktickets-ease);
+  border-radius: 0;
+
+  &:hover {
+    color: var(--iktickets-color-black);
+    background-color: var(--iktickets-color-white);
+  }
+}

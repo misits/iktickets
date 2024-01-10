@@ -1,0 +1,21 @@
+#iktickets {
+    .the-subtitle {
+        margin-bottom: var(--iktickets-sp-xxxl);
+
+        &--iktickets-sp-sm {
+            margin-bottom: var(--iktickets-sp-md);
+        }
+    }
+
+    .the-subtitle-iktickets-medium {
+        font-weight: var(--iktickets-font-weight-medium);
+        font-size: var(--iktickets-font-size-lg);
+        margin: 0;
+    }
+
+    .the-subtitle-bold {
+        font-weight: var(--iktickets-font-weight-bold);
+        font-size: var(--iktickets-font-size-md);
+        margin: 0;
+    }
+}

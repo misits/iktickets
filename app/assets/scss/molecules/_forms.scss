@@ -1,0 +1,32 @@
+.iktickets-events-list {
+    position: relative;
+
+    .lds-spinner {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &.is-loading {
+        table {
+            opacity: 0.5;
+
+            a {
+                pointer-events: none;
+            }
+        }
+        
+        .lds-spinner {
+            display: block;
+        }
+    }
+}
+
+.max-available-message {
+    margin-bottom: var(--iktickets-sp-sm);
+    font-size: var(--iktickets-font-size-md);
+    color: var(--iktickets-color-red);
+}
+
