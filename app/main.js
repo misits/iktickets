@@ -1,14 +1,14 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
-import App from "./App.vue";
-import router from "./router/routes";
+import App from "@/App.vue";
+import router from "@/router/routes";
 import { createI18n } from "vue-i18n";
-import messages from "./i18n/messages";
-import { useWpdataStore } from "./stores/wpdata";
-import { useEventsStore } from "./stores/events";
-import { useCartStore } from "./stores/cart";
+import messages from "@/i18n/messages";
+import { useWpdataStore } from "@/stores/wpdata";
+import { useEventsStore } from "@/stores/events";
+import { useCartStore } from "@/stores/cart";
 import axios from "axios";
-import "./mixins"; // Import utils functions
+import "@/mixins"; // Import utils functions
 
 document.addEventListener("DOMContentLoaded", function() {
     // Attach an event listener to the form submit
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 if (document.getElementById("iktickets")) {
     // prefix all axios requests
     const path = window.location.pathname;
-    const routes = ["/billetterie", "/ticketing", "/kasse"];
+    const routes = ["/iktickets"];
     
     let prefix = "";
     if (/^\/[^/]+\/billetterie\/$/.test(path)) {
@@ -47,7 +47,10 @@ if (document.getElementById("iktickets")) {
     const theme = appElement.getAttribute("data-theme");
     const lang = appElement.getAttribute("data-lang");
     const wpdata = JSON.parse(appElement.getAttribute("data-content")) || {};
+    const posts = appElement.getAttribute("data-events-posts") ? JSON.parse(appElement.getAttribute("data-events-posts")) : [];
     const events = appElement.getAttribute("data-events") ? JSON.parse(appElement.getAttribute("data-events")) : [];
+
+    wpdata.posts = posts;
 
     // update --iktickets-color-main
     document.documentElement.style.setProperty("--iktickets-color-main", theme);
@@ -78,9 +81,9 @@ if (document.getElementById("iktickets")) {
         if (event.target.tagName === "A") {
             const href = event.target.getAttribute("href");
 
-            if (href.startsWith("/billetterie") || href.startsWith("/ticketing") || href.startsWith("/kasse")) {
+            if (href.startsWith("/iktickets")) {
                 event.preventDefault();
-                router.push(href.replace("/billetterie", ""));
+                router.push(href.replace("/iktickets", ""));
             }
         }
     });

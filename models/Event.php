@@ -6,7 +6,7 @@ use Iktickets\http\EventController;
 use Iktickets\models\EventCategory;
 use Iktickets\models\CustomPostType;
 
-class Event extends CustomPostType
+class Event extends CustomPostType implements \JsonSerializable
 {
     const TYPE = 'ikevent';
     const SLUG = 'evenements';
@@ -49,6 +49,37 @@ class Event extends CustomPostType
             'taxonomies' => ['ikevent_category'],
             "supports" => ["title", "editor", "thumbnail", "excerpt"],
         ];
+    }
+
+    /**
+     * Get team as JSON
+     * 
+     * @return array
+     */
+    public function jsonSerialize(): mixed
+    {
+        return [
+            "id" => $this->id(),
+            "title" => $this->title(),
+            "slug" => $this->slug(),
+            "link" => $this->link(),
+            "excerpt" => $this->excerpt(),
+            "content" => $this->content(),
+            "next_events" => $this->get_events(1, function ($next_event) {
+                return $next_event;
+            }),
+            "thumbnail" => $this->thumbnail_url(),
+        ];
+    }
+
+    public static function allToJson()
+    {
+        $events = static::all();
+        $result = [];
+        foreach ($events as $event) {
+            $result[] = $event->jsonSerialize();
+        }
+        return json_encode($result);
     }
 
     public static function current_event(callable $callback)

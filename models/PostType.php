@@ -226,6 +226,12 @@ abstract class PostType
         return null;
     }
 
+    public function thumbnail_url(): string
+    {
+        $id = get_post_thumbnail_id($this->id());
+        return wp_get_attachment_image_url($id, 'full');
+    }
+
     /**
      * Get if the post has a parent post
      *

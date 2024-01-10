@@ -1,0 +1,57 @@
+$theme: (
+    // Colors
+    iktickets-color-main: #000,
+    iktickets-color-second: #cb333b,
+    iktickets-color-white: #fff,
+    iktickets-color-black: #000,
+    iktickets-color-grey: #afb0b3,
+    iktickets-color-grey-light: #cecece,
+    iktickets-color-grey-lighter: #f5f5f5,
+    iktickets-color-grey-dark: #707070,
+    iktickets-color-green-open: #3ad316,
+    iktickets-color-red: #cb333b,
+
+    // breakpoints
+    iktickets-large: 1400px,
+    iktickets-desktop: 1280px,
+    iktickets-medium: 1124px,
+    iktickets-tablet: 860px,
+    iktickets-small: 600px,
+    iktickets-phone: 400px,
+
+    // radius
+    iktickets-border-radius: 4px,
+
+    // font
+    iktickets-font-size-xs: 12px,
+    iktickets-font-size-sm: 14px,
+    iktickets-font-size-md: 16px,
+    iktickets-font-size-lg: 20px,
+    iktickets-font-size-xl: 30px,
+
+    iktickets-font-weight-regular: 400,
+    iktickets-font-weight-medium: 500,
+    iktickets-font-weight-bold: 700,
+
+    // global spacing
+    iktickets-sp-xs: 10px,
+    iktickets-sp-sm: 15px,
+    iktickets-sp-md: 20px,
+    iktickets-sp-mdl: 25px,
+    iktickets-sp-lg: 30px,
+    iktickets-sp-larger: 35px,
+    iktickets-sp-xl: 40px,
+    iktickets-sp-title: 35px,
+    iktickets-sp-xxl: 50px,
+    iktickets-sp-xxxl: 60px,
+
+    // calendar
+    iktickets-calendar-border-color: #f5f5f5,
+    iktickets-calendar-today-color: inherit,
+
+    // ease
+    iktickets-ease: iktickets-ease-in-out,
+
+    iktickets-box-shadow-hover: rgba(0, 0, 0, 0.24) 0px 3px 8px,
+    iktickets-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
+);
