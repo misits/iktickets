@@ -40,6 +40,21 @@ defined( 'ABSPATH' ) or exit;
 define( 'IKTICKETS_DIR', plugin_dir_path(__FILE__) );
 define( 'IKTICKETS_URL', plugin_dir_url(__FILE__) );
 
+require 'utils/plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/misits/iktickets',
+	__FILE__,
+	'iktickets'
+);
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
+
+//Optional: If you're using a private repository, specify the access token like this:
+//$myUpdateChecker->setAuthentication('your-token-here');
+
 // Api
 include(IKTICKETS_DIR . "/utils/main.php");
 
