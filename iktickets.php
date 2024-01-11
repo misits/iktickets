@@ -10,6 +10,7 @@
  * Author: Martin IS IT Services
  * Author URI: https://misits.ch
  * Text Domain: iktickets
+ * License: GPL v2 or later
  * Domain Path: /languages
  */
 
