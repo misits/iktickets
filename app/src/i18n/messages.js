@@ -148,6 +148,7 @@ const messages = {
         text: {
             see_event_dates: "See event dates",
             book_now: "Book now",
+            next_event: "Next event",
         },
         country: {
             albania: "Albania",
@@ -524,6 +525,7 @@ const messages = {
         text: {
             see_event_dates: "Voir les dates de l'événement",
             book_now: "Réserver maintenant",
+            next_event: "Prochain événement",
         },
         country: {
             albania: "Albanie",
@@ -902,6 +904,7 @@ const messages = {
         text: {
             see_event_dates: "Veranstaltungstermine anzeigen",
             book_now: "Jetzt buchen",
+            next_event: "Nächste Veranstaltung",
         },
         country: {
             albania: "Albanien",

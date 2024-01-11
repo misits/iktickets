@@ -345,6 +345,7 @@ export default {
             background-color: var(--iktickets-color-main);
             color: var(--iktickets-color-white);
             transition: background-color 0.2s;
+            border-radius: var(--iktickets-border-radius);
             a {
                 color: var(--iktickets-color-white);
                 text-decoration: none;

@@ -1,6 +1,6 @@
 <template>
-    <article class="cards cards--event" :class="`event-${event.id}`">
-        <a class="cards__container" :href="`${event.link}`">
+    <article class="cards cards--event" :class="`iktickets-${event.id}`">
+        <EventTypeLink :slug="event.slug" class="cards__container">
             <div class="cards__image">
                 <figure>
                     <picture>
@@ -24,7 +24,6 @@
                         <p class="month">{{ moment(event.next_events[0].date).format("MMM") }}</p>
                     </div>
                     <div class="info">
-
                         <div class="address">
                             <p>
                                 <LocationIcon :size="16" />
@@ -40,17 +39,12 @@
                         </div>
                     </div>
                 </div>
-                <hr />
-                <EventTypeLink :slug="event.slug" class="btn">
-                    <TicketIcon :size="25" />
-                </EventTypeLink>
             </div>
-        </a>
+        </EventTypeLink>
     </article>
 </template>
 <script>
 import EventTypeLink from '@/components/events/EventTypeLink.vue';
-import TicketIcon from "@/assets/images/svg/ticket.vue";
 import TimeIcon from "@/assets/images/svg/time.vue";
 import LocationIcon from "@/assets/images/svg/location.vue";
 import moment from "moment";
@@ -64,7 +58,6 @@ export default {
     },
     components: {
         EventTypeLink,
-        TicketIcon,
         TimeIcon,
         LocationIcon
     },

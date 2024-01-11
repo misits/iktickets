@@ -3,7 +3,7 @@
         <p class="category">{{ item.category.name_languages[locale] }}</p>
         <div class="counter">
             <button class="btn-counter" @click="decrement">-</button>
-            <input class="items-counter" type="number" v-model.number="number" :max="freeSeats" />
+            <input class="items-counter" type="number" v-model.number="number" :max="freeSeats" readonly/>
             <button class="btn-counter" @click="increment">+</button>
         </div>
     </div>

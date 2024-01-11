@@ -372,4 +372,27 @@ class EventController extends IkController
         // If no errors, return the response data wrapped in a WP_REST_Response
         return new WP_REST_Response($response_data, 200);
     }
+
+    /**
+     * Get event by slug
+     * @param $request
+     * @return WP_REST_Response | WP_Error
+     */
+    public function get_event_by_slug($request): WP_REST_Response|WP_Error
+    {
+        $event_slug = $request->get_param('event_slug');
+
+        // Get the event by slug
+        $event = get_page_by_path($event_slug, OBJECT, Event::TYPE);
+
+        // Check if event exists
+        if (!$event) {
+            return new WP_Error('not_found', 'Event not found', array('status' => 404));
+        }
+
+        // Get the event by id
+        $event = new Event($event->ID);
+
+        return new WP_REST_Response($event, 200);
+    }
 }

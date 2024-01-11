@@ -9,7 +9,7 @@
             <p class="price" v-else>{{ $t("ticketing.free") }}</p>
             <button class="btn-counter btn-counter--minus" @click="decrement">&ndash;</button>
             <input :class="'items-counter items-counter-' + category.name_languages[locale].slugify()" type="number"
-                v-model.number="number" min="0" :max="freeSeats" @input="validateNumber"/>
+                v-model.number="number" min="0" :max="freeSeats" @input="validateNumber" readonly/>
             <button class="btn-counter btn-counter--plus" @click="increment">&#43;</button>
         </div>
     </div>
