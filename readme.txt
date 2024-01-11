@@ -34,7 +34,7 @@ Key features include:
 3. Activate the plugin through the `Plugins` screen in WordPress.
 4. Use the `Iktickets > Settings` menu to configure the plugin.
 
-== Usage ==
+= Usage =
 
 = Settings =
 1. Go to `Iktickets > Settings` and fill in the fields for the Infomaniak Events API. (See Frequently Asked Questions)
@@ -52,12 +52,15 @@ You can use the following code snippets to display the events in a template file
 
 == Frequently Asked Questions ==
 **Q:** How to get the API key?
+
 **A:** The API key can be found in `Infomaniak dashboard > Billetterie > Boutique / Mise en ligne > Accès API`.
 
 **Q:** How to get the API token?
+
 **A:** The API token can be found in `Infomaniak dashboard > Développeur > Tokens API`, then click on `Créer un token API` and select `eticket` as scopes.
 
 **Q:** How to display events in a page?
+
 **A:** The shortcode is `[iktickets_events]` and can be used in any page. You can also use code snippets to display the events in a template file. See (Code Snippets).
 
 == Screenshots ==
