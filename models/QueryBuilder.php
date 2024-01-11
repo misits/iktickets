@@ -2,6 +2,9 @@
 
 namespace Iktickets\models;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 class QueryBuilder
 {
     const ORDER_ASC = "ASC";

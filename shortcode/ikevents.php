@@ -7,6 +7,9 @@ use Iktickets\http\IkController;
 use Iktickets\models\Page;
 use Iktickets\models\Event;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 $model = new Page(get_the_ID());
 
 ?>

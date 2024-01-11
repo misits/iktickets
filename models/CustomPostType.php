@@ -4,6 +4,9 @@ namespace Iktickets\models;
 
 use Iktickets\models\PostType;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 abstract class CustomPostType extends PostType
 {
     abstract public static function type_settings();

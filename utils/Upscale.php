@@ -2,6 +2,9 @@
 
 namespace Iktickets\utils;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 class Upscale
 {
     public static function resize_crop($orig_w, $orig_h, $new_w, $new_h)

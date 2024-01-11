@@ -6,6 +6,9 @@ use Iktickets\http\EventController;
 use \WP_REST_Response;
 use \WP_Error;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 class TicketController extends IkController
 {
     const ENUM_PARAMS = array(

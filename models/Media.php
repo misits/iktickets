@@ -5,6 +5,9 @@ namespace Iktickets\models;
 use Iktickets\utils\Size;
 use Iktickets\models\PostType;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 class Media extends PostType
 {
     const TYPE = 'attachment';

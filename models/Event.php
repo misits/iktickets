@@ -6,6 +6,9 @@ use Iktickets\http\EventController;
 use Iktickets\models\EventCategory;
 use Iktickets\models\CustomPostType;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 class Event extends CustomPostType implements \JsonSerializable
 {
     const TYPE = 'ikevent';

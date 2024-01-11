@@ -7,6 +7,9 @@ use \WP_REST_Response;
 use \WP_Query;
 use \Exception;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 abstract class IkController
 {
     const PROJECT_NAME = "iktickets";

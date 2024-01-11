@@ -4,6 +4,9 @@ namespace Iktickets\models;
 
 use Iktickets\models\PostType;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 class Page extends PostType
 {
     const TYPE = "page";

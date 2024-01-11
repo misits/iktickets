@@ -5,6 +5,9 @@ namespace Iktickets\models;
 use Iktickets\utils\WPML;
 use Iktickets\models\Media;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 abstract class PostType
 {
     protected $id;

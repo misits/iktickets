@@ -2,6 +2,9 @@
 
 namespace Iktickets\utils;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 class WPML
 {
     public static function languages(callable $renderLanguage = null)

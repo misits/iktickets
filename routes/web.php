@@ -7,6 +7,9 @@ use Iktickets\http\TicketController;
 use Iktickets\http\EventController;
 use Iktickets\http\OrderController;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 add_action('rest_api_init', function() {
     error_log('Registering Iktickets routes');
 

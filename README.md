@@ -20,7 +20,7 @@ If you find this plugin helpful, consider supporting its development via [PayPal
 - Theme colors customization
 - Order as guest or with an account
 - Registration form for new accounts
-- Payment handled by Infomaniak Events (PayPal, PostFinance, Twint, Visa, Mastercard, etc.)
+- Payment handled by Infomaniak Events (PostFinance, Twint, Visa, Mastercard, etc.)
 
 ## Installation
 
@@ -73,6 +73,7 @@ You can use the following code snippets to display the events in a template file
 - [ ] Style single event page
 - [ ] Display banner on top of the page when action is done or error
 - [ ] Clean vue components & scss double code
+- [ ] Translate plugin
 - [ ] ... and more
 
 ## Changelog

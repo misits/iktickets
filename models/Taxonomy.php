@@ -2,6 +2,9 @@
 
 namespace Iktickets\models;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 abstract class Taxonomy implements \JsonSerializable
 {
     const TYPE = 'category';

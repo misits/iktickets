@@ -5,6 +5,9 @@ namespace Iktickets\models;
 use Iktickets\models\Event;
 use Iktickets\models\Taxonomy;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 class EventCategory extends Taxonomy
 {
     const TYPE = 'ikevent_category';

@@ -8,6 +8,9 @@ use Iktickets\models\Event;
 use Iktickets\utils\Size;
 use Iktickets\utils\Upscale;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 // register routes
 include(IKTICKETS_DIR . '/routes/web.php');
 

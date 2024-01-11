@@ -5,6 +5,9 @@ namespace Iktickets\http;
 use \WP_REST_Response;
 use \WP_Error;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 class OrderController extends IkController
 {
     const ENUM_PAYMENT_MODE = array(

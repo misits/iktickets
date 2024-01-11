@@ -10,6 +10,9 @@ use \WP_REST_Response;
 use \WP_Error;
 use \WP_Query;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 class EventController extends IkController
 {
     const HOOK_NAME = "sync-iktickets_events";

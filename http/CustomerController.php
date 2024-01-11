@@ -5,6 +5,9 @@ namespace Iktickets\http;
 use \WP_REST_Response;
 use \WP_Error;
 
+// Prevent direct access.
+defined( 'ABSPATH' ) or exit;
+
 class CustomerController extends IkController
 {
     const ENUM_PARAMS_CREATE_USER = array(
