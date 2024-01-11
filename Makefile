@@ -52,7 +52,7 @@ dev:
 production:
 	@echo "${GREEN}Compiling iktickets for production...${RESET}"
 	@rm -f ./app/.dev
-	@${DOCKER} exec nodejs yarn run production
+	@${DOCKER} exec nodejs yarn run build
 
 yarn:
 	@echo "${GREEN}Running yarn...${RESET}"

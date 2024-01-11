@@ -55,7 +55,6 @@ const fetchZone = () => {
         });
       });
       dataready.value = true;
-      console.log(zones.value);
     })
     .catch((error) => {
       console.log(error);

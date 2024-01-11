@@ -95,6 +95,7 @@ export default {
     min-height: 65px;
     padding: var(--iktickets-sp-sm);
     margin-bottom: var(--iktickets-sp-xs);
+    border-radius: var(--iktickets-border-radius);
 
     .category {
         display: flex;

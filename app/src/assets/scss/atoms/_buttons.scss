@@ -7,15 +7,17 @@
 .iktickets-btn {
   width: fit-content;
   padding: 0.5em 1em;
-  color: var(--iktickets-color-white);
+  color: var(--iktickets-color-white) !important;
   background-color: var(--iktickets-color-black);
   border: 2px solid var(--iktickets-color-black);
   cursor: pointer;
-  transition: all 0.3s var(--iktickets-ease);
+  transition: background-color 0.3s var(--iktickets-ease), color 0.3s var(--iktickets-ease);
   border-radius: 0;
+  text-decoration: none;
 
   &:hover {
-    color: var(--iktickets-color-black);
+    color: var(--iktickets-color-black) !important;
     background-color: var(--iktickets-color-white);
+
   }
 }

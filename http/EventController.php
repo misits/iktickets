@@ -128,6 +128,7 @@ class EventController extends IkController
                 'post_title' => $event['name'],
                 'post_type' => Event::TYPE,
                 'post_status' => $event['status_label']['value'] == self::VISIBLE_CUSTOMER ? 'publish' : 'draft',
+                'post_content' => $event['description'],
             );
                
             // If post doesn't exist, create it
@@ -149,6 +150,7 @@ class EventController extends IkController
                     'post_name' => $slug,
                     'post_type' => Event::TYPE,
                     'post_status' => $event['status_label']['value'] == self::VISIBLE_CUSTOMER ? 'publish' : 'draft',
+                    'post_content' => $event['description'],
                 ));
                 $image_url = $event['portal_horizontal_big'] ?? $event['portal'];
                 // Remove all after ? in url
@@ -207,13 +209,15 @@ class EventController extends IkController
     
                 if (isset($ticketIdLookup[$ticketId])) {
                     $ticketIdLookup[$ticketId]['date'] = date_i18n('Y-m-d', strtotime($item['date']));
-                    $ticketIdLookup[$ticketId]['start'] = date_i18n('H:i', strtotime($item['date']));
-                    $ticketIdLookup[$ticketId]['end'] = date_i18n('H:i', strtotime($item['end'] ?? "00:00:00"));
+                    $ticketIdLookup[$ticketId]['start_hour'] = date_i18n('H:i', strtotime($item['date']));
+                    $ticketIdLookup[$ticketId]['address'] = $item['address'];
+                    $ticketIdLookup[$ticketId]['end_hour'] = $item['end'] ? date_i18n('H:i', strtotime($item['end'])) : null;
                 } else {
                     $representations[] = [
                         'date' => date_i18n('Y-m-d', strtotime($item['date'])),
                         'start_hour' => date_i18n('H:i', strtotime($item['date'])),
-                        'end_hour' => date_i18n('H:i', strtotime($item['end'] ?? "00:00:00")),
+                        'end_hour' => $item['end'] ? date_i18n('H:i', strtotime($item['end'])) : null,
+                        'address' => $item['address'],
                         'ticket_id' => $ticketId
                     ];
                 }

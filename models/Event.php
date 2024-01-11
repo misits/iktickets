@@ -65,6 +65,7 @@ class Event extends CustomPostType implements \JsonSerializable
             "link" => $this->link(),
             "excerpt" => $this->excerpt(),
             "content" => $this->content(),
+            "categories" => $this->get_categories(true),
             "next_events" => $this->get_events(1, function ($next_event) {
                 return $next_event;
             }),
@@ -75,10 +76,33 @@ class Event extends CustomPostType implements \JsonSerializable
     public static function allToJson()
     {
         $events = static::all();
+
+        // sort all by next event date
+        usort($events, function ($a, $b) {
+            $a_next_event = $a->get_events(1, function ($next_event) {
+                return $next_event;
+            });
+            $b_next_event = $b->get_events(1, function ($next_event) {
+                return $next_event;
+            });
+
+            if (empty($a_next_event) || empty($b_next_event)) {
+                return 0;
+            }
+
+            return strtotime($a_next_event[0]['date']) <=> strtotime($b_next_event[0]['date']);
+        });
+
         $result = [];
         foreach ($events as $event) {
+
+            if ($event->is_archived()) {
+                continue;
+            }
+
             $result[] = $event->jsonSerialize();
         }
+
         return json_encode($result);
     }
 

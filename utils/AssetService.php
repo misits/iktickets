@@ -153,7 +153,7 @@ class AssetService
 
     public static function version($file = null)
     {
-        $path = IKTICKETS_URL . "/app/compiled/mix-manifest.json";
+        $path = IKTICKETS_URL . "/app/compiled/.vite/mix-manifest.json";
 
         if (!file_exists($path)) {
             return null;

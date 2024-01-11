@@ -344,6 +344,7 @@ export default {
             text-align: center;
             background-color: var(--iktickets-color-main);
             color: var(--iktickets-color-white);
+            transition: background-color 0.2s;
             a {
                 color: var(--iktickets-color-white);
                 text-decoration: none;
