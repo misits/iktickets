@@ -78,7 +78,7 @@ You can use the following code snippets to display the events in a template file
 
 ## Changelog
 
-### Beta 1.0.0
+### 1.0.0
 
 - Initial release.
 
@@ -93,3 +93,14 @@ This project is licensed under the [GNU General Public License v2 or later](http
 ## Donations
 
 If you find this plugin helpful, consider supporting its development via [PayPal](https://www.paypal.com/donate/?hosted_button_id=8YDDNMSELC5CS).
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
