@@ -61,7 +61,7 @@ You can use the following code snippets to display the events in a template file
 
 ## Support
 
-For support, please visit [Cpteasy Issues](https://github.com/misits/iktickets/issues).
+For support, please visit [Iktickets Issues](https://github.com/misits/iktickets/issues).
 
 ## License
 
