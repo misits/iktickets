@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/donate/?hosted_button_id=8YDDNMSELC5CS
 Requires at least: 5.0
 Tested up to: 6.4.2
 Requires PHP: 8.0
-Stable tag: beta
+Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 

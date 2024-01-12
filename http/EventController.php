@@ -50,7 +50,7 @@ class EventController extends IkController
         // Create a scheduled event every hour
         add_action(self::HOOK_NAME, [self::class, "register_events"]);
         if (!wp_next_scheduled(self::HOOK_NAME)) {
-            wp_schedule_event(time(), 'weekly', self::HOOK_NAME);
+            wp_schedule_event(time(), 'daily', self::HOOK_NAME);
         }
     }
 
