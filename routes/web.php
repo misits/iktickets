@@ -134,15 +134,14 @@ add_action('rest_api_init', function() {
         'callback' => array($eventController, 'get_all_events'),
     ));
 
-    register_rest_route($namespace, '/event/(?P<event_slug>[a-zA-Z0-9-]+)', array(
-        'methods' => 'GET',
-        'callback' => array($eventController, 'get_event_by_slug')
-    ));
-
-
     register_rest_route($namespace, '/event/(?P<event_id>\d+)', array(
         'methods' => 'GET',
         'callback' => array($eventController, 'get_event_by_id')
+    ));
+
+    register_rest_route($namespace, '/event/(?P<event_slug>[a-zA-Z0-9-]+)', array(
+        'methods' => 'GET',
+        'callback' => array($eventController, 'get_event_by_slug')
     ));
 
     register_rest_route($namespace, '/event/(?P<event_id>\d+)/zones', array(

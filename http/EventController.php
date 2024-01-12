@@ -364,9 +364,15 @@ class EventController extends IkController
     {
         $event_id = $request->get_param('event_id');
         $response_data = parent::apiRequest('/event/' . $event_id . '/realfreeseats', parent::LANG_FR, parent::CURRENCY_CHF, [], [], 'GET');
+
         // Check for errors
         if (is_wp_error($response_data)) {
             return $response_data;  // Return the WP_Error
+        }
+
+        // is value is null, set it to 0
+        if (!$response_data) {
+            $response_data = 0;
         }
 
         // If no errors, return the response data wrapped in a WP_REST_Response
