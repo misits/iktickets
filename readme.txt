@@ -29,7 +29,7 @@ Key features include:
 - Payment handled by Infomaniak Events (PostFinance, Twint, Visa, Mastercard, etc.)
 
 == Installation ==
-1. Download the repository: [https://github.com/misits/iktickets](https://github.com/misits/iktickets/releases)
+1. Download the repository: https://github.com/misits/iktickets/releases
 2. Upload the `iktickets` folder to your WordPress plugin installation.
 3. Activate the plugin through the `Plugins` screen in WordPress.
 4. Use the `Iktickets > Settings` menu to configure the plugin.
