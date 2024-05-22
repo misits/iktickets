@@ -5,7 +5,7 @@
 
 ## Description
 
-This is a ticketing system for Infomaniak Events. It is a Wordpress plugin that allows to sell tickets for events directly on the website.
+This is a ticketing system for [Infomaniak Events](https://www.infomaniak.com/goto/fr/home?utm_term=664daa56ccbad). It is a Wordpress plugin that allows to sell tickets for events directly on the website.
 
 The plugin needs to be configured with the Infomaniak Events API key and token. It also needs a cron job to synchronize the events with Infomaniak Events.
 
