@@ -121,7 +121,3 @@ If you find this plugin helpful, consider supporting its development via [PayPal
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-## Looking for a web hosting provider?
-
-<a href="https://www.infomaniak.com/goto/fr/hosting.web?utm_term=664daa56ccbad"><img src="https://affiliation.storage5.infomaniak.com/banners/leaderboardhebergement_fr.jpg"></a>
